@@ -1,6 +1,7 @@
 import WebSocket, { WebSocketServer } from "ws";
+const PORT = process.env.PORT || 4000;
 const wss = new WebSocketServer({
-    port: 4000
+    port: PORT
 });
 const clients = new Map();
 wss.on('connection', (ws, req) => {
